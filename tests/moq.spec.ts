@@ -14,6 +14,9 @@ test.beforeEach(async ({ page }) => {
       await expect(page.locator('label.video.label span')).not.toHaveText('');
       await expect(page.getByText('click to play')).toBeHidden()
 
+      await page.mouse.wheel(0, 500);
+      await page.evaluate("document.body.style.zoom=0.65")
+
       break;
     } catch (error) {
       console.log('Playing the video failed, retrying...');
