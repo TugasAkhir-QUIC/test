@@ -52,5 +52,9 @@ const downloadResults = async (page, path) => {
   const downloadPromise2 = page.waitForEvent('download');
   const download2 = await downloadPromise2;
   await download2.saveAs(resultPath + path + download2.suggestedFilename());
+
+  const downloadPromise3 = page.waitForEvent('download');
+  const download3 = await downloadPromise3;
+  await download3.saveAs(resultPath + path + download3.suggestedFilename());
 }
 
