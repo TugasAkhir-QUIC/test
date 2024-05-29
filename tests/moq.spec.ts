@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 
 const resultPath = './downloads'
-const downloadTimeout = 180000;
+const downloadTimeout = 120000;
 
 test.beforeEach(async ({ page }) => {
   while (true) {
